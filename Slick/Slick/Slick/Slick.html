@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>
+        Hướng dẫn tạo Slider với Slick
+    </title>
+    <link href="Content/slick.css" rel="stylesheet" />
+    <link href="Content/slick-theme.css" rel="stylesheet" />
+    <style>
+        body {
+            background-color: #3498db;
+        }
+        .slider {
+            width: 600px;
+            margin: 0 auto;
+        }
+        .title {
+            text-align: center;
+            margin-top: 50px;
+        }
+        .slick-dots li button:before {
+            font-size: 20px;
+        }
+        .slider h1 {
+            background: #fff;
+            color: #3498db;
+            font-size: 36px;
+            line-height: 100px;
+            margin: 10px;
+            padding: 2%;
+            position: relative;
+            text-align: center;
+            height: 100%;
+        }
+      
+        
+    </style>
+
+    <script src="Scripts/jquery-1.10.2.js"></script>
+    <script src="Scripts/jquery-migrate-1.2.1.min.js"></script>
+    <script src="Scripts/slick.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            //------------------------------
+            $(".single-item").slick({
+                dots: true
+            });
+            //------------------------------
+            $('.multiple-items').slick({
+                dots:true,
+                infinite: true,
+                slidesToShow: 3,
+                slidesToScroll: 3
+            });
+            //------------------------------
+        });
+    </script>
+</head>
+    <body>
+        <h1 class="title">Single Item</h1>
+        <div class="slider single-item" role="toolbar">
+            <div><h1>1</h1></div>
+            <div><h1>2</h1></div>
+            <div><h1>3</h1></div>
+            <div><h1>4</h1></div>
+            <div><h1>5</h1></div>
+            <div><h1>6</h1></div>
+            <div><h1>7</h1></div>
+            <div><h1>8</h1></div>
+            <div><h1>9</h1></div>
+            <div><h1>10</h1></div>
+        </div>
+    </body>
+</html>
